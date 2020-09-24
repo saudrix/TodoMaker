@@ -8,9 +8,9 @@ class Todo(models.Model):
         return self.name
 
 class Item(models.Model):
-    todo_id = models.ForeignKey(List, on_delete=models.CASCADE)
+    todo_id = models.ForeignKey(Todo, on_delete=models.CASCADE)
     descp = models.CharField(max_length=200)
-    status = models.BooleanField(initial=False)
+    status = models.BooleanField(default=False)
 
     def __str__(self):
         return self.descp
