@@ -21,17 +21,21 @@ import Item from './Item.vue'
 
 export default {
 	components: { Item },
+
   name: 'Todo',
   props: {
     todo: Object
   },
-	data () {
+
+  data () {
 		return {
 			items: [],
       newItem: ''
 		};
 	},
+
   methods:{
+    // Ajout d'un nouvel item dans la liste
     addItem () {
 
       const formData = new FormData();
@@ -50,6 +54,8 @@ export default {
       this.items.push({descp: this.newItem});
       this.newItem = ""
     },
+
+    // Retrait d'un item de la liste
     deleteItem (item) {
 
       fetch('http://localhost:8000/api/item/' + item.id + '/', {
@@ -63,6 +69,7 @@ export default {
 		}
   },
 	mounted () {
+    // Appel asynchrone (chargement des données)
 		fetch("http://localhost:8000/api/item/")
 			.then(response => response.json())
 			.then(items => {

@@ -14,10 +14,9 @@ export default {
   props: {
 		item: Object
   },
-	mounted () {
-		console.log(this.item);
-	},
+
   methods:{
+    // Validation d'un item
     Check(){
       const formData = new FormData();
       formData.append('status', !this.item.status);

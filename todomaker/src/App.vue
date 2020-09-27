@@ -19,15 +19,19 @@ import Todo from './components/Todo.vue'
 
 export default {
 	name: 'App',
+
   components: {
     Todo
   },
-	data() {
+
+  data() {
 		return {
 			todos: [],
 			newTodo: ""
 		};
 	},
+
+  // Appel dans le lifecycle (montage du composant)
 	mounted () {
 		fetch("http://localhost:8000/api/todo/")
 			.then(response => response.json())
@@ -37,6 +41,7 @@ export default {
 			});
 	},
 	methods: {
+    // Ajout d'un nouvelle liste
 		addTodo () {
 
       const formData = new FormData();
@@ -51,6 +56,7 @@ export default {
 			this.todos.push({name: this.newTodo});
       this.newTodo = ""
 		},
+    // Retrait d'une liste
 		deleteTodo (todo) {
 
       fetch('http://localhost:8000/api/todo/' + todo.id + '/', {

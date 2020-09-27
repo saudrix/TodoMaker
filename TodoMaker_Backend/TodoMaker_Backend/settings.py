@@ -75,7 +75,6 @@ WSGI_APPLICATION = 'TodoMaker_Backend.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -83,7 +82,18 @@ DATABASES = {
     }
 }
 
-
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'postgreDB',
+        'USER': 'utilisateur',
+        'PASSWORD': 'pass',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
+"""
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
