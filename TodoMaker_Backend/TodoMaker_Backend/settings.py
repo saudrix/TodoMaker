@@ -83,6 +83,9 @@ DATABASES = {
 }
 
 """
+Permet le changement de système de BDD l'avantage de django est la totale
+abstraction par l'ORM qui permet des changement facile de SGBDR
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -126,6 +129,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+# Permission pour les cors headers
 CORS_ORIGIN_ALLOW_ALL = True
 
 # Static files (CSS, JavaScript, Images)

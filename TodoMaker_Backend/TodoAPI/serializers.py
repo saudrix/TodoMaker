@@ -1,6 +1,10 @@
 from rest_framework import serializers
-
 from .models import Todo,Item
+
+"""
+Classe permettant de transformer automatiquement
+les données de json à python à la BDD
+"""
 
 class TodoSerializer(serializers.ModelSerializer):
     class Meta:
@@ -20,12 +24,6 @@ class ItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = Item
         fields = ('descp','status','id','todo_id')
-
-    #todo_id = TodoSerializer()
-    #todo_id = serializers.IntegerField()
-    #id = serializers.IntegerField(read_only=True)
-    #descp = serializers.CharField(max_length=200)
-    #status = serializers.BooleanField(default=True)
 
     def create(self, data):
         return Item.objects.create(**data)

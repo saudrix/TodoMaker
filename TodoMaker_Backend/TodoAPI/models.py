@@ -1,7 +1,9 @@
 from django.db import models
 
 # Create your models here.
-
+"""
+Modèles des différentes classes utilisées dans les projet
+"""
 class Todo(models.Model):
     name = models.CharField(max_length=200)
 
