@@ -55,7 +55,13 @@ $ yarn serve
 
 pour vérifier que l'application est bien lancée, vous pouvez vous rendre à [l'url](http://localhost:8080)
 
-## Architecture
+## Infos
+
+### Architecture
+
+
+
+### Limitations
 
 
 
@@ -63,9 +69,40 @@ pour vérifier que l'application est bien lancée, vous pouvez vous rendre à [l
 
 ------
 
-### Todo
+### Guideline
 
-[ ] API 
+- [x] Design database
 
-[x] Tests
+- [x] Learn django server
+
+- [x] Learn django REST framework ​​
+
+- [x] Implement Models and Request url
+
+- [x] Test API
+
+  - [x] todo GET, GET/:id
+
+  - [x] todo POST
+  - [x] todo DELETE/:id
+  - [x] item GET/:list_id
+  - [x] item POST/:list_id
+  - [x] item DELETE/:id
+  - [x] item PUT/:id?status=
+
+- [x] Learn Vue.js
+
+- [x] Implement Front-End
+
+  - [x] Load Lists
+  - [x] Load items in each list
+
+  - [x] Add a new list (name)
+  - [x] Add a new item in specific list (description)
+  - [x] Delete a list
+  - [x] Delete an item
+  - [x] Check or uncheck items
+
+- [ ] Write Docker files
+- [ ] Add Docker-Compose
 
